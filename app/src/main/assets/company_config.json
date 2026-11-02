@@ -1,0 +1,245 @@
+{
+  "notice": "DEMO ACADÉMICA. Todos los valores son provisionales; Ariztía no ha confirmado estas reglas.",
+  "normalMin": 3,
+  "normalMax": 5,
+  "criticalLow": 2,
+  "criticalHigh": 6,
+  "decimals": 2,
+  "unit": "ppm",
+  "analyte": "Cloro libre",
+  "refreshSeconds": 60,
+  "staleMinutes": 15,
+  "historyDays": 30,
+  "retentionDays": 90,
+  "escalationMinutes": 30,
+  "notifyWarning": true,
+  "notificationsEnabled": true,
+  "autoDeviation": true,
+  "closeRequiresNormal": true,
+  "offlineWrites": true,
+  "immutableMeasurements": true,
+  "showChart": true,
+  "showComparison": true,
+  "csvExport": true,
+  "extraFields": [
+    "pH",
+    "Temperatura",
+    "Turbidez"
+  ],
+  "roles": {
+    "Operario": [
+      "read",
+      "measure",
+      "action"
+    ],
+    "Supervisor": [
+      "read",
+      "measure",
+      "action",
+      "ack",
+      "close",
+      "correct"
+    ],
+    "Jefatura": [
+      "read",
+      "export"
+    ]
+  },
+  "users": [
+    {
+      "id": "U01",
+      "name": "Operario 1",
+      "roles": [
+        "Operario"
+      ],
+      "farms": [
+        "F1"
+      ],
+      "email": "operario1@cloro.demo",
+      "passwordHash": "3c7358ea9e403e34db0deb9bc2ebbbf3e6923d138bf1001c0fbe80247818ef69"
+    },
+    {
+      "id": "U02",
+      "name": "Operario 2",
+      "roles": [
+        "Operario"
+      ],
+      "farms": [
+        "F1"
+      ],
+      "email": "operario2@cloro.demo",
+      "passwordHash": "cf68e2d6385ecc2f5e80c9210d4c1d27ca19cc431122430aa91e2fc32c0ec312"
+    },
+    {
+      "id": "U03",
+      "name": "Operario 3",
+      "roles": [
+        "Operario"
+      ],
+      "farms": [
+        "F1"
+      ],
+      "email": "operario3@cloro.demo",
+      "passwordHash": "f4207bd7192d9b53e9836f3cf5b024c491c9fe5ae5c0f4bdfe078f6404a581b5"
+    },
+    {
+      "id": "U04",
+      "name": "Operario 4",
+      "roles": [
+        "Operario"
+      ],
+      "farms": [
+        "F2"
+      ],
+      "email": "operario4@cloro.demo",
+      "passwordHash": "64d124ee08088a2ab1d617664bb17bff3d44d9ca6254bf73e7ea0baa88df8e38"
+    },
+    {
+      "id": "U05",
+      "name": "Operario 5",
+      "roles": [
+        "Operario"
+      ],
+      "farms": [
+        "F2"
+      ],
+      "email": "operario5@cloro.demo",
+      "passwordHash": "09aa38f56cde04d5d70e29a18b3fb9d9face4a7436f361e1c7a84c0e161fa016"
+    },
+    {
+      "id": "U06",
+      "name": "Operario 6",
+      "roles": [
+        "Operario"
+      ],
+      "farms": [
+        "F2"
+      ],
+      "email": "operario6@cloro.demo",
+      "passwordHash": "b620a9b7b31159cd69327063b9e0a9b94485d5646ee0a4ce9c60639c88aa52fe"
+    },
+    {
+      "id": "U07",
+      "name": "Operario 7",
+      "roles": [
+        "Operario"
+      ],
+      "farms": [
+        "F3"
+      ],
+      "email": "operario7@cloro.demo",
+      "passwordHash": "ab03a44e586559fa76421b0e2e43ccf04f8b615b2b7b7d292d2076cd349b872b"
+    },
+    {
+      "id": "U08",
+      "name": "Operario 8",
+      "roles": [
+        "Operario"
+      ],
+      "farms": [
+        "F3"
+      ],
+      "email": "operario8@cloro.demo",
+      "passwordHash": "8e0e3a7e21a8f59e43497266c75f873cd6727dc517f99dad4db0b83711872e1b"
+    },
+    {
+      "id": "U09",
+      "name": "Operario 9",
+      "roles": [
+        "Operario"
+      ],
+      "farms": [
+        "F3"
+      ],
+      "email": "operario9@cloro.demo",
+      "passwordHash": "dd218c6508aea1195a33a0ea814a6c21cd9134ffaffb08c1bab2ea3c72c64334"
+    },
+    {
+      "id": "U10",
+      "name": "Supervisor 1",
+      "roles": [
+        "Supervisor"
+      ],
+      "farms": [
+        "F1"
+      ],
+      "email": "supervisor1@cloro.demo",
+      "passwordHash": "6e874976df7f44173e521a49b9c11fb1e08049997b93c816811e998d3cb872a2"
+    },
+    {
+      "id": "U11",
+      "name": "Supervisor 2",
+      "roles": [
+        "Supervisor"
+      ],
+      "farms": [
+        "F2"
+      ],
+      "email": "supervisor2@cloro.demo",
+      "passwordHash": "d8b94b35c4d862e06aa56888417baa1133e9f2b1837aaa9933e5daa27d8db2d5"
+    },
+    {
+      "id": "U12",
+      "name": "Supervisor 3",
+      "roles": [
+        "Supervisor"
+      ],
+      "farms": [
+        "F3"
+      ],
+      "email": "supervisor3@cloro.demo",
+      "passwordHash": "a1a8fc829d528426e8a4510d9aa156560c9b9a46f7990dc2d2d608c57c821b5c"
+    },
+    {
+      "id": "U13",
+      "name": "Jefatura 1",
+      "roles": [
+        "Jefatura"
+      ],
+      "farms": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "email": "jefatura1@cloro.demo",
+      "passwordHash": "f1b04c761e7f5447d7479d4ddc7df4f0956336d804e887131d7e7049a0134e85"
+    },
+    {
+      "id": "U14",
+      "name": "Jefatura 2",
+      "roles": [
+        "Jefatura"
+      ],
+      "farms": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "email": "jefatura2@cloro.demo",
+      "passwordHash": "41d401cf9cf962b049854320dbff781edf75f8432419729228e0efef8d9f171e"
+    },
+    {
+      "id": "U15",
+      "name": "Jefatura 3",
+      "roles": [
+        "Jefatura"
+      ],
+      "farms": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "email": "jefatura3@cloro.demo",
+      "passwordHash": "dae7710d0c7ed9c19ec5ba9f675c157683060d607a9012969352317098339e83"
+    }
+  ],
+  "pointRanges": {},
+  "pendingBusiness": {
+    "notice": "Propuestas académicas recibidas 29/10/2026. Validar con docente DSY1105; no son condiciones empresariales confirmadas."
+  },
+  "notifyRoles": [
+    "Operario",
+    "Supervisor"
+  ],
+  "simulationSeconds": 300
+}
