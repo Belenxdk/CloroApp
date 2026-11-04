@@ -1,0 +1,126 @@
+{
+  "notice": "DEMO ACADÉMICA. Todos los valores son provisionales; Ariztía no ha confirmado estas reglas.",
+  "normalMin": 0.5,
+  "normalMax": 1.5,
+  "criticalLow": 0.2,
+  "criticalHigh": 2.0,
+  "decimals": 2,
+  "unit": "mg/L",
+  "analyte": "Cloro libre",
+  "refreshSeconds": 60,
+  "staleMinutes": 15,
+  "historyDays": 30,
+  "retentionDays": 90,
+  "escalationMinutes": 30,
+  "notifyWarning": true,
+  "notificationsEnabled": true,
+  "autoDeviation": true,
+  "closeRequiresNormal": true,
+  "offlineWrites": true,
+  "immutableMeasurements": true,
+  "showChart": true,
+  "showComparison": true,
+  "csvExport": true,
+  "extraFields": [
+    "pH",
+    "Temperatura",
+    "Turbidez"
+  ],
+  "roles": {
+    "Operario": [
+      "read",
+      "measure",
+      "action"
+    ],
+    "Supervisor": [
+      "read",
+      "measure",
+      "action",
+      "ack",
+      "close",
+      "correct"
+    ],
+    "Jefatura": [
+      "read",
+      "export"
+    ]
+  },
+  "users": [
+    {
+      "id": "OP01",
+      "name": "Ana Demo",
+      "roles": [
+        "Operario"
+      ],
+      "farms": [
+        "F1"
+      ]
+    },
+    {
+      "id": "SU01",
+      "name": "Luis Demo",
+      "roles": [
+        "Supervisor"
+      ],
+      "farms": [
+        "F1",
+        "F2"
+      ]
+    },
+    {
+      "id": "JE01",
+      "name": "Elena Demo",
+      "roles": [
+        "Jefatura"
+      ],
+      "farms": [
+        "F1",
+        "F2"
+      ]
+    }
+  ],
+  "pointRanges": {},
+  "pendingBusiness": {
+    "rangeAuthority": "Por confirmar; rangos ficticios sin referencia normativa",
+    "conversion": "Desactivada; unidad única. Confirmar equivalencia y redondeo con la empresa antes de implementar conversiones.",
+    "measurementMethod": "Simulación de sensores y registro manual ficticio",
+    "currentRegister": "Por confirmar: papel, Excel o sistema",
+    "instrument": "Por confirmar",
+    "samplingFrequency": "Por confirmar; el refresco de pantalla no equivale a frecuencia de muestreo",
+    "identity": "Selector de usuarios demo. Autenticación corporativa pendiente",
+    "devices": "Android 7 o superior por minSdk 24; parque real pendiente",
+    "connectivity": "Desconocida; cache local y cola de registros habilitados",
+    "security": "Datos ficticios en almacenamiento privado; sin backup. Requisitos empresariales pendientes",
+    "expectedUsers": 20,
+    "hierarchy": "Granja > galpón opcional > punto > mediciones",
+    "correctiveProcedure": "Registrar observación y acción; validación del supervisor. No es protocolo sanitario.",
+    "actionEvidence": "Texto, autor y fecha implementados. Fotos y firmas pendientes de alcance.",
+    "alertRecipients": "En la demo solo el dispositivo activo, puntos asignados al usuario. Push y destinatarios corporativos pendientes.",
+    "backgroundNotifications": "No implementadas. Se generan al actualizar con la app abierta; definir necesidad de push.",
+    "reportFormats": "CSV implementado; PDF y formatos corporativos pendientes",
+    "amino": "Integración futura desactivada; falta contrato, responsable, permisos y documentación",
+    "erp": "Integración futura desactivada; falta objetivo y contrato",
+    "mvp": "Consulta por punto, alertas, histórico, seguimiento, API simulada, persistencia, notificaciones locales",
+    "notificationRepeat": "Solo al crear desviación o cambiar gravedad. Repetición temporal pendiente de respuesta e implementación.",
+    "notificationDelay": "Primera lectura fuera de rango; demora y lecturas consecutivas pendientes.",
+    "alertSilencing": "No permitido en MVP; política pendiente.",
+    "conversionFactor": null,
+    "totalChlorine": "No habilitado; caso exige cloro libre, confirmar si se amplía a total o ambos.",
+    "displayPrecision": "2 decimales al mostrar; se conserva la precisión numérica de entrada.",
+    "historicalCharts": "Lista, tendencia, promedio, mínimo y máximo; exportación CSV.",
+    "stagesAndPointTypes": "Por confirmar; pointRanges permite excepciones por identificador de punto.",
+    "lowVersusHigh": "Misma gravedad y flujo, diferenciados por valor y umbral. Procedimientos particulares pendientes.",
+    "notifyLatency": "Actualización foreground cada 60 segundos + tiempo de red; no garantiza tiempo real.",
+    "actionRequiredFields": "Texto de 5 caracteres mínimo, autor y fecha automáticos. Foto/firma no implementadas.",
+    "closureRule": "Acción registrada y lectura normal reciente; supervisor.",
+    "uiSeparation": "Pantallas comunes con operaciones filtradas por rol activo y granjas asignadas.",
+    "usability": "Navegación simple por resumen, puntos y alertas; capacitación pendiente.",
+    "userCount": "Estimación demo de 20, no prueba de carga ni dato empresarial.",
+    "reportsRetention": "30 días consultables y 90 días de lecturas locales; acciones y alertas no se borran automáticamente."
+  },
+  "notifyRoles": [
+    "Operario",
+    "Supervisor",
+    "Jefatura"
+  ]
+}
